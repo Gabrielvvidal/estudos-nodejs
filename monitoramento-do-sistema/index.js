@@ -39,7 +39,7 @@ function newLog({ plataform, arch, cpu, time, ramPercentage }) {
     return
   }
 
-  const logContent = `DETALHES DO SISTEMA | SISTEMA OPERACIONAL: ${plataform} | ARQUITETURA: ${arch} | CPU: ${cpu} | TEMPO DE USO: ${time} HORAS | USO DA RAM: ${ramPercentage}`
+  const logContent = `DETALHES DO SISTEMA | SISTEMA OPERACIONAL: ${plataform} | ARQUITETURA: ${arch} | CPU: ${cpu} | TEMPO DE USO: ${time} HORAS | USO DA RAM: ${ramPercentage}%`
 
   fs.appendFileSync('./log/log.txt', logContent, (err) => {
     if (err) {
@@ -49,7 +49,7 @@ function newLog({ plataform, arch, cpu, time, ramPercentage }) {
 }
 
 function editLog({ plataform, arch, cpu, time, ramPercentage }) {
-  const logContent = `DETALHES DO SISTEMA | SISTEMA OPERACIONAL: ${plataform} | ARQUITETURA: ${arch} | CPU: ${cpu} | TEMPO DE USO: ${time} HORAS | USO DA RAM: ${ramPercentage}`
+  const logContent = `DETALHES DO SISTEMA | SISTEMA OPERACIONAL: ${plataform} | ARQUITETURA: ${arch} | CPU: ${cpu} | TEMPO DE USO: ${time} HORAS | USO DA RAM: ${ramPercentage}%`
 
   fs.appendFileSync('./log/log.txt', '\n'+logContent, (err) => {
     if (err) {
